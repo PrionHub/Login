@@ -284,10 +284,6 @@ function Components.CreateCheckBox(Properties)
         end
     
     }
-    
-    ApplyCorner(Box)
-    
-    return Box
 
 end
 
