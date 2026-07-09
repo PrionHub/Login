@@ -38,7 +38,7 @@ local UI = Build.Build()
 
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
---[[local Data = Remember.Load()
+local Data = Remember.Load()
 
 if Data then
 
@@ -69,11 +69,4 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     end
 
-end)]]
-
-Remember.Save("PrionHub", "12345")
-
-local data = Remember.Load()
-
-print(data.Username)
-print(data.Password)
+end)
