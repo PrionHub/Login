@@ -40,7 +40,7 @@ Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
 local Data = Remember.Load()
 
-if Data then
+--[[if Data then
 
     UI.UsernameBox.Text = Data.Username
 
@@ -50,7 +50,7 @@ if Data then
 
 end
 
---[[UI.LoginButton.MouseButton1Click:Connect(function()
+UI.LoginButton.MouseButton1Click:Connect(function()
 
     if UI.Remember:GetValue() then
 
