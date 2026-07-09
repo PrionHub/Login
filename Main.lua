@@ -46,13 +46,13 @@ if Data then
 
     UI.PasswordBox.Text = Data.Password
 
-    UI.Remember:SetValue(true)
+    UI.Remember.SetValue(true)
 
 end
 
 UI.LoginButton.MouseButton1Click:Connect(function()
 
-    if UI.Remember:GetValue() then
+    if UI.Remember.GetValue() then
 
         Remember.Save(
             UI.UsernameBox.Text,
