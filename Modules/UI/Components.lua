@@ -84,6 +84,8 @@ local function ApplyTheme(Object, ObjectType)
         Object.BackgroundColor3 = Theme.Colors.Secondary
         Object.BorderSizePixel = 0
 
+        Object.Text = ""
+
         Object.TextColor3 = Theme.Colors.Text
         Object.PlaceholderColor3 = Theme.Colors.TextDark
 
