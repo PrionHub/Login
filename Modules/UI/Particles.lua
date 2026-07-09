@@ -4,6 +4,10 @@ local RunService = game:GetService("RunService")
 
 function Particles.Create(Frame, Container)
 
+    repeat
+        task.wait()
+    until Frame.AbsoluteSize.X > 0
+
     local PARTICLE_COUNT = 40
     local particles = {}
 
