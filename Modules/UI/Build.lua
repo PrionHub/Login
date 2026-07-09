@@ -58,6 +58,26 @@ local function CreateMainFrame(ScreenGui)
 
 end
 
+local function CreateParticleContainer(MainFrame)
+
+    local ParticleContainer = Instance.new("Frame")
+
+    ParticleContainer.Size = UDim2.fromScale(1, 1)
+
+    ParticleContainer.BackgroundTransparency = 1
+
+    ParticleContainer.BorderSizePixel = 0
+
+    ParticleContainer.ClipsDescendants = true
+
+    ParticleContainer.ZIndex = 1
+
+    ParticleContainer.Parent = MainFrame
+
+    return ParticleContainer
+
+end
+
 local function CreateHeader(UI)
 
     UI.Logo = Components.CreateImage({
@@ -197,6 +217,8 @@ function Build.Build()
     UI.ScreenGui = CreateScreenGui()
 
     UI.MainFrame = CreateMainFrame(UI.ScreenGui)
+
+    UI.ParticleContainer = CreateParticleContainer(UI.MainFrame)
 
     CreateHeader(UI)
 
