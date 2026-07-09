@@ -140,6 +140,16 @@ local function CreateBody(UI)
 
     })
 
+    UI.Remember = Components.CreateCheckBox({
+
+        Parent = UI.MainFrame,
+    
+        Position = UDim2.fromOffset(30, 242),
+    
+        Text = "Remember Login"
+    
+    })
+
 end
 
 local function CreateFooter(UI)
