@@ -2,6 +2,7 @@ local Build = {}
 
 local App
 local Components
+local Assets
 
 --==========================
 -- Inicialización
@@ -11,6 +12,7 @@ function Build.Init(Application)
 
     App = Application
     Components = App.Components
+    Assets = App.Assets
 
 end
 
