@@ -69,11 +69,11 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     end
 
-end)
+end)]]
 
 Remember.Save("PrionHub", "12345")
 
 local data = Remember.Load()
 
 print(data.Username)
-print(data.Password)]]
+print(data.Password)
