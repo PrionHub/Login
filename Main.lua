@@ -9,6 +9,8 @@ local Components =
 
 local Build =
     loadstring(game:HttpGet(Base.."Modules/UI/Build.lua"))()
+local Assets =
+    loadstring(game:HttpGet(Base.."Modules/Utils/Assets.lua"))()
 
 -- Crear App primero
 local App = {}
@@ -16,6 +18,7 @@ local App = {}
 App.Theme = Theme
 App.Components = Components
 App.Build = Build
+App.Assets = Assets
 
 -- Inicializar módulos
 Components.Init(App)
