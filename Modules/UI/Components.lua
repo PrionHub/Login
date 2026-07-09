@@ -195,6 +195,11 @@ end
 
 function Components.CreateCheckBox(Properties)
 
+    local Text = Properties.Text
+
+    local NewProperties = table.clone(Properties)
+    NewProperties.Text = nil
+
     local Box = Instance.new("TextButton")
 
     ApplyTheme(Box, ComponentType.CheckBox)
@@ -217,6 +222,8 @@ function Components.CreateCheckBox(Properties)
 
     Mark.TextSize = 16
 
+    Mark.Font = Enum.Font.SourceSansBold
+
     Mark.Parent = Box
 
     local Label = Instance.new("TextLabel")
@@ -229,7 +236,7 @@ function Components.CreateCheckBox(Properties)
 
     Label.Size = UDim2.fromOffset(150, 18)
 
-    Label.Text = Properties.Text or ""
+    Label.Text = Text or ""
 
     Label.TextColor3 = Theme.Colors.Text
 
