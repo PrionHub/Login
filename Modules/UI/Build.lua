@@ -84,16 +84,40 @@ end
 
 local function CreateBody(UI)
 
-    UI.KeyBox = Components.CreateTextBox({
+    UI.UsernameBox = Components.CreateTextBox({
 
         Parent = UI.MainFrame,
-
-        Size = UDim2.fromOffset(240, 45),
-
-        Position = UDim2.fromOffset(20, 130),
-
-        PlaceholderText = "Enter your key..."
-
+    
+        Size = UDim2.fromOffset(240, 32),
+    
+        Position = UDim2.fromOffset(20, 120),
+    
+        PlaceholderText = "Username / Usuario..."
+    
+    })
+    
+    UI.PasswordBox = Components.CreateTextBox({
+    
+        Parent = UI.MainFrame,
+    
+        Size = UDim2.fromOffset(240, 32),
+    
+        Position = UDim2.fromOffset(20, 170),
+    
+        PlaceholderText = "Password / Contraseña..."
+    
+    })
+    
+    UI.KeyBox = Components.CreateTextBox({
+    
+        Parent = UI.MainFrame,
+    
+        Size = UDim2.fromOffset(240, 32),
+    
+        Position = UDim2.fromOffset(20, 220),
+    
+        PlaceholderText = "Key / Llave..."
+    
     })
 
     UI.LoginButton = Components.CreateButton({
@@ -102,10 +126,22 @@ local function CreateBody(UI)
 
         Size = UDim2.fromOffset(240, 40),
 
-        Position = UDim2.fromOffset(20, 300),
+        Position = UDim2.fromOffset(20, 310),
 
-        Text = "Login"
+        Text = "Login / Register"
 
+    })
+
+    UI.GetKeyButton = Components.CreateButton({
+
+        Parent = UI.MainFrame,
+    
+        Size = UDim2.fromOffset(240, 40),
+    
+        Position = UDim2.fromOffset(20, 360),
+    
+        Text = "Obtener Llave | Get Key"
+    
     })
 
 end
