@@ -1,6 +1,7 @@
 local Build = {}
 
 local App
+local Theme
 local Components
 local Assets
 
@@ -13,6 +14,7 @@ function Build.Init(Application)
     App = Application
     Components = App.Components
     Assets = App.Assets
+    Theme = App.Theme
 
 end
 
@@ -75,8 +77,6 @@ local function CreateHeader(UI)
         Parent = UI.MainFrame,
 
         FontFace = Theme.Fonts.Title,
-            
-        TextSize = 13,
 
         Size = UDim2.new(1, 0, 0, 30),
 
