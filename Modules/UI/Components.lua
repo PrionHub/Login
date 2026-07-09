@@ -270,11 +270,11 @@ function Components.CreateCheckBox(Properties)
     
     end
     
-    function Box:GetValue()
+    --[[function Box:GetValue()
     
         return Enabled
     
-    end
+    end]]
 
     ApplyCorner(Box)
     
