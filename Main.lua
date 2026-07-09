@@ -38,6 +38,6 @@ local UI = Build.Build()
 
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
---UI.Remember:SetValue(true)
+UI.Remember:SetValue(true)
 
---print(UI.Remember:GetValue())
+print(UI.Remember:GetValue())
