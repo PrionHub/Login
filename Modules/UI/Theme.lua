@@ -2,10 +2,11 @@ local Theme = {}
 
 -- Colores
 Theme.Colors = {
-    Background = Color3.fromRGB(15, 15, 15),
+    Background = Color3.fromRGB(1, 1, 1),
     Secondary = Color3.fromRGB(25, 25, 25),
-    Accent = Color3.fromRGB(0, 170, 255),
+    Accent = Color3.fromRGB(255, 0, 0),
 
+    Border = Color3.fromRGB(255, 0, 0),
     Text = Color3.fromRGB(255, 255, 255),
     TextDark = Color3.fromRGB(180, 180, 180),
 
