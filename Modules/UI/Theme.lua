@@ -27,5 +27,3 @@ Theme.CornerRadius = UDim.new(0, 8)
 Theme.StrokeThickness = 1.5
 
 return Theme
-
-return {}
