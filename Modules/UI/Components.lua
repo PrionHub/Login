@@ -1,9 +1,13 @@
 local Components = {}
 
+local App
 local Theme
 
-function Components.Init(CurrentTheme)
-    Theme = CurrentTheme
+function Components.Init(Application)
+
+    App = Application
+    Theme = App.Theme
+
 end
 
 function Components.CreateFrame(Properties)
