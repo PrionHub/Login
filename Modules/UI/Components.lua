@@ -44,7 +44,7 @@ local function ApplyStroke(Object)
 
     local Stroke = Instance.new("UIStroke")
     Stroke.Thickness = Theme.StrokeThickness
-    Stroke.Color = Theme.Colors.Accent
+    Stroke.Color = Theme.Colors.Border
     Stroke.Transparency = 0.4
     Stroke.Parent = Object
 
