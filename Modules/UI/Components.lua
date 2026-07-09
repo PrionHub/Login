@@ -206,7 +206,7 @@ function Components.CreateCheckBox(Properties)
 
     Box.Size = UDim2.fromOffset(18, 18)
 
-    ApplyProperties(Box, Properties)
+    ApplyProperties(Box, NewProperties)
 
     local Mark = Instance.new("TextLabel")
 
