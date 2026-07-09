@@ -3,12 +3,23 @@ local Components = {}
 local App
 local Theme
 
+local ComponentType = {
+    Frame = "Frame",
+    Label = "Label",
+    Button = "Button",
+    TextBox = "TextBox",
+    Image = "Image",
+    ScrollingFrame = "ScrollingFrame"
+}
+
 --==========================
 -- Funciones privadas
 --==========================
 
 local function ApplyProperties(Object, Properties)
 
+    Properties = Properties or {}
+    
     for Property, Value in pairs(Properties) do
         if Property ~= "Parent" then
             Object[Property] = Value
@@ -39,6 +50,52 @@ local function ApplyStroke(Object)
 
 end
 
+local function ApplyTheme(Object, ObjectType)
+
+    if ObjectType == ComponentType.Frame then
+
+        Object.BackgroundColor3 = Theme.Colors.Background
+        Object.BorderSizePixel = 0
+
+    elseif ObjectType == ComponentType.Label then
+
+        Object.BackgroundTransparency = 1
+        Object.BorderSizePixel = 0
+
+        Object.TextColor3 = Theme.Colors.Text
+        Object.Font = Theme.Fonts.Text
+
+        Object.TextScaled = true
+        Object.TextWrapped = true
+
+    elseif ObjectType == ComponentType.Button then
+
+        Object.BackgroundColor3 = Theme.Colors.Accent
+        Object.BorderSizePixel = 0
+
+        Object.TextColor3 = Theme.Colors.Text
+        Object.Font = Theme.Fonts.Button
+
+        Object.TextScaled = true
+        Object.AutoButtonColor = false
+
+    elseif ObjectType == ComponentType.TextBox then
+
+        Object.BackgroundColor3 = Theme.Colors.Secondary
+        Object.BorderSizePixel = 0
+
+        Object.TextColor3 = Theme.Colors.Text
+        Object.PlaceholderColor3 = Theme.Colors.TextDark
+
+        Object.Font = Theme.Fonts.Text
+
+        Object.TextScaled = true
+        Object.ClearTextOnFocus = false
+
+    end
+
+end
+
 --==========================
 -- Inicialización
 --==========================
@@ -57,35 +114,26 @@ end
 function Components.CreateFrame(Properties)
 
     local Frame = Instance.new("Frame")
-
-    Frame.BackgroundColor3 = Theme.Colors.Background
-    Frame.BorderSizePixel = 0
-
+    
+    ApplyTheme(Frame, ComponentType.Frame)
+    
     ApplyProperties(Frame, Properties)
-
+    
     ApplyCorner(Frame)
     ApplyStroke(Frame)
-
+    
     return Frame
 
 end
 
 function Components.CreateLabel(Properties)
 
-    local Label = Instance.new("TextLabel")
+   local Label = Instance.new("TextLabel")
 
-    -- Estilo por defecto
-    Label.BackgroundTransparency = 1
-    Label.BorderSizePixel = 0
-
-    Label.TextColor3 = Theme.Colors.Text
-    Label.Font = Theme.Fonts.Text
-
-    Label.TextScaled = true
-    Label.TextWrapped = true
-
+    ApplyTheme(Label, ComponentType.Label)
+    
     ApplyProperties(Label, Properties)
-
+    
     return Label
 
 end
@@ -94,20 +142,13 @@ function Components.CreateButton(Properties)
 
     local Button = Instance.new("TextButton")
 
-    Button.BackgroundColor3 = Theme.Colors.Accent
-    Button.BorderSizePixel = 0
-
-    Button.TextColor3 = Theme.Colors.Text
-    Button.Font = Theme.Fonts.Button
-
-    Button.TextScaled = true
-    Button.AutoButtonColor = false
-
+    ApplyTheme(Button, ComponentType.Button)
+    
     ApplyProperties(Button, Properties)
-
+    
     ApplyCorner(Button)
     ApplyStroke(Button)
-
+    
     return Button
 
 end
@@ -116,16 +157,7 @@ function Components.CreateTextBox(Properties)
 
     local Box = Instance.new("TextBox")
 
-    Box.BackgroundColor3 = Theme.Colors.Secondary
-    Box.BorderSizePixel = 0
-
-    Box.TextColor3 = Theme.Colors.Text
-    Box.PlaceholderColor3 = Theme.Colors.TextDark
-
-    Box.Font = Theme.Fonts.Text
-
-    Box.TextScaled = true
-    Box.ClearTextOnFocus = false
+    ApplyTheme(Box, ComponentType.TextBox)
 
     ApplyProperties(Box, Properties)
 
