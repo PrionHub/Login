@@ -46,7 +46,9 @@ local function CreateMainFrame(ScreenGui)
 
         Position = UDim2.fromScale(0.5, 0.5),
 
-        AnchorPoint = Vector2.new(0.5, 0.5)
+        AnchorPoint = Vector2.new(0.5, 0.5),
+
+        ClipsDescendants = true
 
     })
 
@@ -87,76 +89,82 @@ local function CreateBody(UI)
     UI.UsernameBox = Components.CreateTextBox({
 
         Parent = UI.MainFrame,
-    
+
         Size = UDim2.fromOffset(240, 32),
-    
-        Position = UDim2.fromOffset(20, 120),
-    
-        PlaceholderText = "Username / Usuario..."
-    
+
+        Position = UDim2.fromOffset(20, 115),
+
+        PlaceholderText = "  Username / Usuario...",
+
+        TextXAlignment = Enum.TextXAlignment.Left,
+
+        TextSize = 14
+
     })
-    
+
     UI.PasswordBox = Components.CreateTextBox({
-    
+
         Parent = UI.MainFrame,
-    
+
         Size = UDim2.fromOffset(240, 32),
-    
-        Position = UDim2.fromOffset(20, 170),
-    
-        PlaceholderText = "Password / Contraseña..."
-    
+
+        Position = UDim2.fromOffset(20, 155),
+
+        PlaceholderText = "  Password / Contraseña...",
+
+        TextXAlignment = Enum.TextXAlignment.Left,
+
+        TextSize = 14
+
     })
-    
+
     UI.KeyBox = Components.CreateTextBox({
-    
+
         Parent = UI.MainFrame,
-    
+
         Size = UDim2.fromOffset(240, 32),
-    
-        Position = UDim2.fromOffset(20, 220),
-    
-        PlaceholderText = "Key / Llave..."
-    
-    })
 
-    UI.LoginButton = Components.CreateButton({
+        Position = UDim2.fromOffset(20, 195),
 
-        Parent = UI.MainFrame,
+        PlaceholderText = "  Key / Llave (Only for Register)...",
 
-        Size = UDim2.fromOffset(240, 40),
+        TextXAlignment = Enum.TextXAlignment.Left,
 
-        Position = UDim2.fromOffset(20, 310),
+        TextSize = 14
 
-        Text = "Login / Register"
-
-    })
-
-    UI.GetKeyButton = Components.CreateButton({
-
-        Parent = UI.MainFrame,
-    
-        Size = UDim2.fromOffset(240, 40),
-    
-        Position = UDim2.fromOffset(20, 360),
-    
-        Text = "Obtener Llave | Get Key"
-    
     })
 
 end
 
 local function CreateFooter(UI)
 
-    UI.Status = Components.CreateLabel({
+    UI.LoginButton = Components.CreateButton({
 
         Parent = UI.MainFrame,
 
-        Size = UDim2.new(1, 0, 0, 30),
+        Size = UDim2.fromOffset(240, 35),
 
-        Position = UDim2.fromOffset(0, 255),
+        Position = UDim2.fromOffset(20, 275),
 
-        Text = "Ready"
+        Text = "Login / Register",
+
+        TextSize = 14
+
+    })
+
+    UI.GetKeyButton = Components.CreateButton({
+
+        Parent = UI.MainFrame,
+
+        Size = UDim2.fromOffset(240, 35),
+
+        Position = UDim2.fromOffset(20, 320),
+
+        Text = "Obtener Llave | Get Key",
+
+        TextSize = 14,
+
+        BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 
     })
 
