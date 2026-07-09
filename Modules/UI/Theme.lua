@@ -15,9 +15,9 @@ Theme.Colors = {
 
 -- Fuentes
 Theme.Fonts = {
-    Title = Enum.Font.GothamBold,
-    Text = Enum.Font.Gotham,
-    Button = Enum.Font.GothamSemibold
+    Title = Font.fromName("Michroma"),
+    Text = Enum.Font.SourceSans,
+    Button = Enum.Font.SourceSansBold
 }
 
 -- Bordes
