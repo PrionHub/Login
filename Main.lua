@@ -32,4 +32,6 @@ Build.Init(App)
 -- Construir la interfaz
 local UI = Build.Build()
 
+task.wait(0.1)
+print(UI.MainFrame.AbsoluteSize)
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
