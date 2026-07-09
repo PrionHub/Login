@@ -168,4 +168,17 @@ function Components.CreateTextBox(Properties)
 
 end
 
+function Components.CreateImage(Properties)
+
+    local Image = Instance.new("ImageLabel")
+
+    Image.BackgroundTransparency = 1
+    Image.BorderSizePixel = 0
+
+    ApplyProperties(Image, Properties)
+
+    return Image
+
+end
+
 return Components
