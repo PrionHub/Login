@@ -65,8 +65,8 @@ local function ApplyTheme(Object, ObjectType)
         Object.TextColor3 = Theme.Colors.Text
         Object.Font = Theme.Fonts.Text
 
-        Object.TextScaled = true
-        Object.TextWrapped = true
+        Object.TextScaled = false
+        Object.TextWrapped = false
 
     elseif ObjectType == ComponentType.Button then
 
@@ -76,7 +76,7 @@ local function ApplyTheme(Object, ObjectType)
         Object.TextColor3 = Theme.Colors.Text
         Object.Font = Theme.Fonts.Button
 
-        Object.TextScaled = true
+        Object.TextScaled = false
         Object.AutoButtonColor = false
 
     elseif ObjectType == ComponentType.TextBox then
@@ -89,7 +89,7 @@ local function ApplyTheme(Object, ObjectType)
 
         Object.Font = Theme.Fonts.Text
 
-        Object.TextScaled = true
+        Object.TextScaled = false
         Object.ClearTextOnFocus = false
 
     end
