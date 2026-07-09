@@ -38,9 +38,9 @@ local UI = Build.Build()
 
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
-local Data = Remember.Load()
+--[[local Data = Remember.Load()
 
---[[if Data then
+if Data then
 
     UI.UsernameBox.Text = Data.Username
 
