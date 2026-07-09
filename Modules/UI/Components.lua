@@ -9,6 +9,7 @@ local ComponentType = {
     Button = "Button",
     TextBox = "TextBox",
     Image = "Image",
+    CheckBox = "CheckBox"
     ScrollingFrame = "ScrollingFrame"
 }
 
@@ -94,6 +95,15 @@ local function ApplyTheme(Object, ObjectType)
         Object.TextScaled = false
         Object.ClearTextOnFocus = false
 
+    elseif ObjectType == ComponentType.CheckBox then
+
+        Object.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        Object.BorderSizePixel = 0
+    
+        Object.Text = ""
+    
+        Object.AutoButtonColor = false
+        
     end
 
 end
@@ -180,6 +190,70 @@ function Components.CreateImage(Properties)
     ApplyProperties(Image, Properties)
 
     return Image
+
+end
+
+function Components.CreateCheckBox(Properties)
+
+    local Box = Instance.new("TextButton")
+
+    ApplyTheme(Box, ComponentType.CheckBox)
+
+    Box.Size = UDim2.fromOffset(18, 18)
+
+    ApplyProperties(Box, Properties)
+
+    local Mark = Instance.new("TextLabel")
+
+    Mark.Name = "Mark"
+
+    Mark.Size = UDim2.fromScale(1, 1)
+
+    Mark.BackgroundTransparency = 1
+
+    Mark.Text = ""
+
+    Mark.TextColor3 = Theme.Colors.Accent
+
+    Mark.TextSize = 16
+
+    Mark.Parent = Box
+
+    local Label = Instance.new("TextLabel")
+
+    Label.Name = "Label"
+
+    Label.BackgroundTransparency = 1
+
+    Label.Position = UDim2.fromOffset(25, 0)
+
+    Label.Size = UDim2.fromOffset(150, 18)
+
+    Label.Text = Properties.Text or ""
+
+    Label.TextColor3 = Theme.Colors.Text
+
+    Label.Font = Theme.Fonts.Text
+
+    Label.TextSize = 14
+
+    Label.TextXAlignment = Enum.TextXAlignment.Left
+
+    Label.Parent = Box
+
+    local Enabled = false
+
+    Box.MouseButton1Click:Connect(function()
+
+        Enabled = not Enabled
+
+        Mark.Text = Enabled and "✓" or ""
+
+    end)
+
+    ApplyCorner(Box)
+
+    return Box
 
 end
 
