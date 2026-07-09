@@ -1,5 +1,11 @@
 local Components = {}
 
+local Theme
+
+function Components.Init(CurrentTheme)
+    Theme = CurrentTheme
+end
+
 function Components.CreateFrame(Properties)
 
     local Frame = Instance.new("Frame")
@@ -7,17 +13,9 @@ function Components.CreateFrame(Properties)
     Frame.BackgroundColor3 = Theme.Colors.Background
     Frame.BorderSizePixel = 0
 
-    if Properties.Size then
-        Frame.Size = Properties.Size
-    end
-
-    if Properties.Position then
-        Frame.Position = Properties.Position
-    end
-
-    if Properties.AnchorPoint then
-        Frame.AnchorPoint = Properties.AnchorPoint
-    end
+    Frame.Size = Properties.Size or UDim2.new()
+    Frame.Position = Properties.Position or UDim2.new()
+    Frame.AnchorPoint = Properties.AnchorPoint or Vector2.zero
 
     if Properties.Parent then
         Frame.Parent = Properties.Parent
