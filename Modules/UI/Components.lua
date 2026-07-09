@@ -62,6 +62,7 @@ local function ApplyTheme(Object, ObjectType)
 
         Object.BackgroundTransparency = 1
         Object.BorderSizePixel = 0
+        Object.ZIndex = 10
 
         Object.TextColor3 = Theme.Colors.Text
         Object.Font = Theme.Fonts.Text
@@ -73,6 +74,7 @@ local function ApplyTheme(Object, ObjectType)
 
         Object.BackgroundColor3 = Theme.Colors.Accent
         Object.BorderSizePixel = 0
+        Object.ZIndex = 10
 
         Object.TextColor3 = Theme.Colors.Text
         Object.Font = Theme.Fonts.Button
@@ -84,6 +86,7 @@ local function ApplyTheme(Object, ObjectType)
 
         Object.BackgroundColor3 = Theme.Colors.Secondary
         Object.BorderSizePixel = 0
+        Object.ZIndex = 10
 
         Object.Text = ""
 
@@ -186,6 +189,7 @@ function Components.CreateImage(Properties)
 
     Image.BackgroundTransparency = 1
     Image.BorderSizePixel = 0
+    Image.ZIndex = 10
 
     ApplyProperties(Image, Properties)
 
