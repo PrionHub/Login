@@ -70,4 +70,70 @@ function Components.CreateFrame(Properties)
 
 end
 
+function Components.CreateLabel(Properties)
+
+    local Label = Instance.new("TextLabel")
+
+    -- Estilo por defecto
+    Label.BackgroundTransparency = 1
+    Label.BorderSizePixel = 0
+
+    Label.TextColor3 = Theme.Colors.Text
+    Label.Font = Theme.Fonts.Text
+
+    Label.TextScaled = true
+    Label.TextWrapped = true
+
+    ApplyProperties(Label, Properties)
+
+    return Label
+
+end
+
+function Components.CreateButton(Properties)
+
+    local Button = Instance.new("TextButton")
+
+    Button.BackgroundColor3 = Theme.Colors.Accent
+    Button.BorderSizePixel = 0
+
+    Button.TextColor3 = Theme.Colors.Text
+    Button.Font = Theme.Fonts.Button
+
+    Button.TextScaled = true
+    Button.AutoButtonColor = false
+
+    ApplyProperties(Button, Properties)
+
+    ApplyCorner(Button)
+    ApplyStroke(Button)
+
+    return Button
+
+end
+
+function Components.CreateTextBox(Properties)
+
+    local Box = Instance.new("TextBox")
+
+    Box.BackgroundColor3 = Theme.Colors.Secondary
+    Box.BorderSizePixel = 0
+
+    Box.TextColor3 = Theme.Colors.Text
+    Box.PlaceholderColor3 = Theme.Colors.TextDark
+
+    Box.Font = Theme.Fonts.Text
+
+    Box.TextScaled = true
+    Box.ClearTextOnFocus = false
+
+    ApplyProperties(Box, Properties)
+
+    ApplyCorner(Box)
+    ApplyStroke(Box)
+
+    return Box
+
+end
+
 return Components
