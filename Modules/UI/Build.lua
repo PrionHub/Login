@@ -88,9 +88,9 @@ local function CreateBody(UI)
 
         Parent = UI.MainFrame,
 
-        Size = UDim2.fromOffset(320, 45),
+        Size = UDim2.fromOffset(240, 45),
 
-        Position = UDim2.fromOffset(65, 120),
+        Position = UDim2.fromOffset(20, 130),
 
         PlaceholderText = "Enter your key..."
 
@@ -100,9 +100,9 @@ local function CreateBody(UI)
 
         Parent = UI.MainFrame,
 
-        Size = UDim2.fromOffset(200, 45),
+        Size = UDim2.fromOffset(240, 40),
 
-        Position = UDim2.fromOffset(125, 190),
+        Position = UDim2.fromOffset(20, 300),
 
         Text = "Login"
 
