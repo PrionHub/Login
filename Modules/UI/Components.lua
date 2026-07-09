@@ -261,6 +261,20 @@ function Components.CreateCheckBox(Properties)
         Mark.Text = Enabled and "✓" or ""
 
     end)
+
+    function Box:SetValue(Value)
+
+        Enabled = Value
+    
+        Mark.Text = Enabled and "✓" or ""
+    
+    end
+    
+    function Box:GetValue()
+    
+        return Enabled
+    
+    end
     
     ApplyCorner(Box)
     
