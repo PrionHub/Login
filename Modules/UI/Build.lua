@@ -56,15 +56,27 @@ end
 
 local function CreateHeader(UI)
 
+    UI.Logo = Components.CreateImage({
+
+        Parent = UI.MainFrame,
+
+        Size = UDim2.fromOffset(140, 70),
+
+        Position = UDim2.fromOffset(70, 15)
+
+    })
+
+    Assets.LoadImage(UI.Logo)
+
     UI.Title = Components.CreateLabel({
 
         Parent = UI.MainFrame,
 
-        Size = UDim2.new(1, 0, 0, 50),
+        Size = UDim2.new(1, 0, 0, 30),
 
-        Position = UDim2.fromOffset(0, 20),
+        Position = UDim2.fromOffset(0, 90),
 
-        Text = "Prion Hub"
+        Text = "PRION HUB | LOGIN SYSTEM"
 
     })
 
