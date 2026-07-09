@@ -78,6 +78,8 @@ local function CreateHeader(UI)
 
         FontFace = Theme.Fonts.Title,
 
+        TextSize = 13,
+
         Size = UDim2.new(1, 0, 0, 30),
 
         Position = UDim2.fromOffset(0, 90),
