@@ -169,6 +169,8 @@ local function CreateBody(UI)
         Text = "Remember Login"
     
     })
+    
+    UI.Remember.Instance.Parent = UI.MainFrame
 
     print(UI.Remember)
     print(UI.Remember.ClassName)
