@@ -263,20 +263,27 @@ function Components.CreateCheckBox(Properties)
     
     end)
     
-    function Box:SetValue(Value)
-        print("SetValue agregado")
+    ApplyCorner(Box)
     
-        Enabled = Value
+    return {
     
-        Mark.Text = Enabled and "✓" or ""
+        Instance = Box,
     
-    end
+        SetValue = function(Value)
     
-    function Box:GetValue()
+            Enabled = Value
     
-        return Enabled
+            Mark.Text = Enabled and "✓" or ""
     
-    end
+        end,
+    
+        GetValue = function()
+    
+            return Enabled
+    
+        end
+    
+    }
     
     ApplyCorner(Box)
     
