@@ -205,6 +205,7 @@ function Components.CreateCheckBox(Properties)
     NewProperties.Text = nil
 
     local Box = Instance.new("TextButton")
+    print("CreateCheckBox cargado")
 
     ApplyTheme(Box, ComponentType.CheckBox)
 
@@ -263,6 +264,7 @@ function Components.CreateCheckBox(Properties)
     end)
     
     function Box:SetValue(Value)
+        print("SetValue agregado")
     
         Enabled = Value
     
