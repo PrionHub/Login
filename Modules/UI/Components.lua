@@ -21,6 +21,24 @@ local function ApplyProperties(Object, Properties)
 
 end
 
+local function ApplyCorner(Object)
+
+    local Corner = Instance.new("UICorner")
+    Corner.CornerRadius = Theme.CornerRadius
+    Corner.Parent = Object
+
+end
+
+local function ApplyStroke(Object)
+
+    local Stroke = Instance.new("UIStroke")
+    Stroke.Thickness = Theme.StrokeThickness
+    Stroke.Color = Theme.Colors.Accent
+    Stroke.Transparency = 0.4
+    Stroke.Parent = Object
+
+end
+
 --==========================
 -- Inicialización
 --==========================
@@ -45,15 +63,8 @@ function Components.CreateFrame(Properties)
 
     ApplyProperties(Frame, Properties)
 
-    local Corner = Instance.new("UICorner")
-    Corner.CornerRadius = Theme.CornerRadius
-    Corner.Parent = Frame
-
-    local Stroke = Instance.new("UIStroke")
-    Stroke.Thickness = Theme.StrokeThickness
-    Stroke.Color = Theme.Colors.Accent
-    Stroke.Transparency = 0.4
-    Stroke.Parent = Frame
+    ApplyCorner(Frame)
+    ApplyStroke(Frame)
 
     return Frame
 
