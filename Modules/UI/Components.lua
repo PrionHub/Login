@@ -262,7 +262,7 @@ function Components.CreateCheckBox(Properties)
 
     end)
 
-    function Box:SetValue(Value)
+    --[[function Box:SetValue(Value)
 
         Enabled = Value
     
@@ -270,7 +270,7 @@ function Components.CreateCheckBox(Properties)
     
     end
     
-    --[[function Box:GetValue()
+    function Box:GetValue()
     
         return Enabled
     
