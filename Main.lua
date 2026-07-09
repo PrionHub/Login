@@ -50,7 +50,7 @@ if Data then
 
 end
 
-UI.LoginButton.MouseButton1Click:Connect(function()
+--[[UI.LoginButton.MouseButton1Click:Connect(function()
 
     if UI.Remember:GetValue() then
 
@@ -69,4 +69,11 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     end
 
-end)
+end)]]
+
+Remember.Save("PrionHub", "12345")
+
+local data = Remember.Load()
+
+print(data.Username)
+print(data.Password)
