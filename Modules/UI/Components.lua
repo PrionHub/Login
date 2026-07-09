@@ -9,7 +9,7 @@ local ComponentType = {
     Button = "Button",
     TextBox = "TextBox",
     Image = "Image",
-    CheckBox = "CheckBox"
+    CheckBox = "CheckBox",
     ScrollingFrame = "ScrollingFrame"
 }
 
