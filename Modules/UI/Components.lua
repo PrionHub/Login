@@ -255,12 +255,26 @@ function Components.CreateCheckBox(Properties)
     local Enabled = false
 
     Box.MouseButton1Click:Connect(function()
-
+    
         Enabled = not Enabled
-
+    
         Mark.Text = Enabled and "✓" or ""
-
+    
     end)
+    
+    function Box:SetValue(Value)
+    
+        Enabled = Value
+    
+        Mark.Text = Enabled and "✓" or ""
+    
+    end
+    
+    function Box:GetValue()
+    
+        return Enabled
+    
+    end
     
     ApplyCorner(Box)
     
