@@ -38,6 +38,14 @@ local UI = Build.Build()
 
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
-UI.Remember:SetValue(true)
+local Data = Remember.Load()
 
-print(UI.Remember:GetValue())
+if Data then
+
+    UI.UsernameBox.Text = Data.Username
+
+    UI.PasswordBox.Text = Data.Password
+
+    UI.Remember:SetValue(true)
+
+end
