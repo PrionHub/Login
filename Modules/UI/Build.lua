@@ -219,6 +219,8 @@ function Build.Build()
 
     local UI = {}
 
+    UI.Mode = "Login"
+
     UI.ScreenGui = CreateScreenGui()
 
     UI.MainFrame = CreateMainFrame(UI.ScreenGui)
