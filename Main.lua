@@ -38,6 +38,28 @@ local UI = Build.Build()
 
 local RegisterMode = false
 
+UI.SwitchMode.MouseButton1Click:Connect(function()
+
+    RegisterMode = not RegisterMode
+
+    UI.KeyBox.Visible = RegisterMode
+
+    if RegisterMode then
+
+        UI.LoginButton.Text = "Register"
+
+        UI.SwitchMode.Text = "Already have an account? Login"
+
+    else
+
+        UI.LoginButton.Text = "Login"
+
+        UI.SwitchMode.Text = "Don't have an account? Register"
+
+    end
+
+end)
+
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
 UI.SwitchMode.MouseButton1Click:Connect(function()
