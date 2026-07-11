@@ -38,6 +38,34 @@ local UI = Build.Build()
 
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
+UI.SwitchMode.MouseButton1Click:Connect(function()
+
+    if UI.Mode == "Login" then
+
+        UI.Mode = "Register"
+
+        UI.KeyBox.Visible = true
+
+        UI.LoginButton.Text = "Register"
+
+        UI.SwitchMode.Text =
+            "Already have an account? Login"
+
+    else
+
+        UI.Mode = "Login"
+
+        UI.KeyBox.Visible = false
+
+        UI.LoginButton.Text = "Login"
+
+        UI.SwitchMode.Text =
+            "Don't have an account? Register"
+
+    end
+
+end)
+
 local Data = Remember.Load()
 
 if Data then
