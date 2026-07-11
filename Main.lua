@@ -43,8 +43,6 @@ local UI = Build.Build()
 
 Animations.Setup(UI)
 
-local RegisterMode = false
-
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
 local Data = Remember.Load()
