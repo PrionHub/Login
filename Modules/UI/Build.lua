@@ -102,7 +102,7 @@ local function CreateHeader(UI)
 
         Size = UDim2.new(1, 0, 0, 30),
 
-        Position = UDim2.fromOffset(0, 90),
+        Position = UDim2.fromOffset(0, 85),
 
         Text = "PRION HUB | LOGIN SYSTEM"
 
