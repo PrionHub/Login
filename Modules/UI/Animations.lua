@@ -29,7 +29,9 @@ function Animations.Setup(UI)
         local SwitchPos
     
         if RegisterMode then
-    
+
+            UI.Mode = "Register"
+        
             UI.KeyBox.PlaceholderText = "  Key / Llave..."
         
             UI.KeyBox.Visible = true
@@ -42,41 +44,43 @@ function Animations.Setup(UI)
                     TextTransparency = 0,
                 }
             ):Play()
-    
+        
             UI.LoginButton.Text = "Register"
-    
+        
             UI.SwitchMode.Text =
                 "Already have an account? Login"
-    
+        
             NewSize = UDim2.fromOffset(280, 390)
-    
+        
             RememberPos = UDim2.fromOffset(30, 242)
-    
+        
             LoginPos = UDim2.fromOffset(20, 275)
-    
+        
             GetKeyPos = UDim2.fromOffset(20, 320)
-    
+        
             SwitchPos = UDim2.fromOffset(30, 360)
-    
+        
         else
-    
+        
+            UI.Mode = "Login"
+        
             UI.LoginButton.Text = "Login"
-    
+        
             UI.SwitchMode.Text =
                 "Don't have an account? Register"
-    
+        
             UI.KeyBox.PlaceholderText = ""
-    
+        
             NewSize = UDim2.fromOffset(280, 340)
-    
+        
             RememberPos = UDim2.fromOffset(30, 200)
-    
+        
             LoginPos = UDim2.fromOffset(20, 230)
-    
+        
             GetKeyPos = UDim2.fromOffset(20, 275)
-    
+        
             SwitchPos = UDim2.fromOffset(30, 315)
-    
+        
         end
     
         TweenService:Create(
