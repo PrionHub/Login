@@ -80,12 +80,20 @@ end)
 --temp
 UI.LoginButton.MouseButton1Click:Connect(function()
 
+    if not UI.LoginButton.Active then
+        return
+    end
+    
+    UI.LoginButton.Active = false
+
     local Username = UI.UsernameBox.Text
     local Password = UI.PasswordBox.Text
 
     if Username == "" or Password == "" then
 
         warn("Faltan datos.")
+
+        UI.LoginButton.Active = true
 
         return
 
@@ -104,6 +112,8 @@ UI.LoginButton.MouseButton1Click:Connect(function()
             warn("Falta la key.")
 
             UI.LoginButton.Text = "Register"
+
+            UI.LoginButton.Active = true
 
             return
 
