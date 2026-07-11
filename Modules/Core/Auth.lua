@@ -50,6 +50,14 @@ function Auth.Init()
 
     })
 
+    if not response then
+    
+        warn("KeyAuth no respondió.")
+    
+        return false
+
+    end
+
     print(response.Body)
     
     local data = HttpService:JSONDecode(
