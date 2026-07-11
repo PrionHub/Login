@@ -178,9 +178,6 @@ local function CreateBody(UI)
     
     UI.Remember.Instance.Parent = UI.MainFrame
 
-    print(UI.Remember)
-    print(UI.Remember.ClassName)
-
 end
 
 local function CreateFooter(UI)
