@@ -20,6 +20,9 @@ local Assets =
 local Remember =
     loadstring(game:HttpGet(Base.."Modules/Core/Remember.lua"))()
 
+local Auth =
+    loadstring(game:HttpGet(Base.."Modules/Core/Auth.lua"))()
+
 local Animations =
     loadstring(game:HttpGet(Base.."Modules/UI/Animations.lua"))()
 
@@ -32,11 +35,13 @@ App.Build = Build
 App.Assets = Assets
 App.Particles = Particles
 App.Remember = Remember
+App.Auth = Auth
 App.Animations = Animations
 
 -- Inicializar módulos
 Components.Init(App)
 Build.Init(App)
+Auth.Init(App)
 
 -- Construir la interfaz
 local UI = Build.Build()
