@@ -63,8 +63,10 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
 
     if RegisterMode then
 
+        UI.KeyBox.PlaceholderText = "  Key / Llave..."
+    
         UI.KeyBox.Visible = true
-
+    
         TweenService:Create(
             UI.KeyBox,
             TweenInfo,
@@ -95,6 +97,8 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
 
         UI.SwitchMode.Text =
             "Don't have an account? Register"
+
+        UI.KeyBox.PlaceholderText = ""
 
         NewSize = UDim2.fromOffset(280, 330)
 
