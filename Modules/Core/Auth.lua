@@ -3,7 +3,7 @@ local Auth = {}
 local HttpService = game:GetService("HttpService")
 
 local Name = "PrionHub"
-local OwnerId = "kYbqjy1KMp"
+local OwnerId = "kYbqiy1KMp"
 local Secret = "a97af28167838caa7db505e0f245ae989d47ac1d0d60e70fb76eb7e9793286ef"
 local Version = "1.0"
 
