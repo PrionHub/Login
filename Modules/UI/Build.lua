@@ -234,7 +234,7 @@ local function CreateFooter(UI)
     
         Size = UDim2.fromOffset(240, 18),
     
-        Position = UDim2.fromOffset(20, 335),
+        Position = UDim2.fromOffset(20, 355),
     
         Text = "STATUS: Ready.",
     
