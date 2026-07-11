@@ -41,9 +41,9 @@ Build.Init(App)
 -- Construir la interfaz
 local UI = Build.Build()
 
-Animations.Setup(UI)
-
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
+
+Animations.Setup(UI)
 
 local Data = Remember.Load()
 
