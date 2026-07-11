@@ -190,7 +190,7 @@ local function CreateFooter(UI)
 
         Position = UDim2.fromOffset(20, 230),
 
-        Text = "Login / Register",
+        Text = "Login",
 
         TextSize = 14
 
