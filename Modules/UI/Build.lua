@@ -44,7 +44,7 @@ local function CreateMainFrame(ScreenGui)
 
         Parent = ScreenGui,
 
-        Size = UDim2.fromOffset(280, 380),
+        Size = UDim2.fromOffset(280, 390),
 
         Position = UDim2.fromScale(0.5, 0.5),
 
@@ -218,7 +218,7 @@ local function CreateFooter(UI)
     
         Size = UDim2.fromOffset(220, 20),
     
-        Position = UDim2.fromOffset(30, 355),
+        Position = UDim2.fromOffset(30, 365),
     
         Text = "Don't have an account? Register",
     
