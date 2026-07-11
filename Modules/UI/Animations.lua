@@ -61,7 +61,7 @@ function Animations.Setup(UI)
         
             SwitchPos = UDim2.fromOffset(30, 360)
 
-            StatusPos = UDim2.fromOffset(20, 375)
+            StatusPos = UDim2.fromOffset(20, 380)
         
         else
         
