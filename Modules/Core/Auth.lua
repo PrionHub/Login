@@ -78,4 +78,41 @@ function Auth.Init()
     return false
 end
 
+function Auth.Login(Username, Password)
+
+    local response = httpRequest({
+
+        Url = "https://keyauth.win/api/1.2/",
+
+        Method = "POST",
+
+        Headers = {
+
+            ["Content-Type"] =
+                "application/x-www-form-urlencoded"
+
+        },
+
+        Body = string.format(
+
+            "type=login&username=%s&pass=%s&sessionid=%s&name=%s&ownerid=%s",
+
+            Username,
+            Password,
+            SessionId,
+            Name,
+            OwnerId
+
+        )
+
+    })
+
+    local data = HttpService:JSONDecode(
+        response.Body
+    )
+
+    return data
+
+end
+
 return Auth
