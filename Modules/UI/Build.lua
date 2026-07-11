@@ -218,7 +218,7 @@ local function CreateFooter(UI)
     
         Size = UDim2.fromOffset(220, 20),
     
-        Position = UDim2.fromOffset(30, 365),
+        Position = UDim2.fromOffset(30, 360),
     
         Text = "Don't have an account? Register",
     
