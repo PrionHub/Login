@@ -55,6 +55,16 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
 
         UI.KeyBox.Visible = true
 
+        TweenService:Create(
+            UI.KeyBox,
+            TweenInfo,
+            {
+                BackgroundTransparency = 0,
+                TextTransparency = 0,
+                PlaceholderTransparency = 0
+            }
+        ):Play()
+
         UI.LoginButton.Text = "Register"
 
         UI.SwitchMode.Text =
@@ -130,6 +140,16 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
     ):Play()
 
     if not RegisterMode then
+
+        TweenService:Create(
+            UI.KeyBox,
+            TweenInfo,
+            {
+                BackgroundTransparency = 1,
+                TextTransparency = 1,
+                PlaceholderTransparency = 1
+            }
+        ):Play()
 
         task.delay(0.35, function()
 
