@@ -10,7 +10,7 @@ local Version = "1.0"
 local SessionId
 
 local httpRequest =
-    syn and syn.request
+    (syn and syn.request)
     or http_request
     or request
 
