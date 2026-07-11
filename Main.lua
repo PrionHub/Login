@@ -157,7 +157,7 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
         task.wait(0.8)
 
-        UI.ScreenGui:Destroy()
+        Animations.Close(UI)
 
         -- Aquí luego llamaremos a:
         -- loadstring(game:HttpGet(...))()
