@@ -14,6 +14,14 @@ local httpRequest =
     or http_request
     or request
 
+if not httpRequest then
+
+    warn("Tu executor no soporta HTTP requests.")
+
+    return Auth
+
+end
+
 function Auth.Init()
 
     local response = httpRequest({
@@ -42,6 +50,8 @@ function Auth.Init()
 
     })
 
+    print(response.Body)
+    
     local data = HttpService:JSONDecode(
         response.Body
     )
