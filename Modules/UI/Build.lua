@@ -46,7 +46,7 @@ local function CreateMainFrame(ScreenGui)
 
         Size = UDim2.fromOffset(280, 360),
 
-        Position = UDim2.fromScale(0.5, 0.5),
+        Position = UDim2.fromScale(0.5, -10),
 
         AnchorPoint = Vector2.new(0.5, 0.5),
 
