@@ -56,7 +56,7 @@ function Animations.Setup(UI)
     
             GetKeyPos = UDim2.fromOffset(20, 320)
     
-            SwitchPos = UDim2.fromOffset(30, 355)
+            SwitchPos = UDim2.fromOffset(30, 360)
     
         else
     
@@ -67,7 +67,7 @@ function Animations.Setup(UI)
     
             UI.KeyBox.PlaceholderText = ""
     
-            NewSize = UDim2.fromOffset(280, 330)
+            NewSize = UDim2.fromOffset(280, 340)
     
             RememberPos = UDim2.fromOffset(30, 200)
     
@@ -75,7 +75,7 @@ function Animations.Setup(UI)
     
             GetKeyPos = UDim2.fromOffset(20, 275)
     
-            SwitchPos = UDim2.fromOffset(30, 310)
+            SwitchPos = UDim2.fromOffset(30, 315)
     
         end
     
