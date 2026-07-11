@@ -36,6 +36,8 @@ Build.Init(App)
 -- Construir la interfaz
 local UI = Build.Build()
 
+local RegisterMode = false
+
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
 UI.SwitchMode.MouseButton1Click:Connect(function()
