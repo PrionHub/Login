@@ -47,7 +47,7 @@ local UI = Build.Build()
 
 App.UI = UI
 
-Auth.Init(App)
+Auth.Init()
 
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
