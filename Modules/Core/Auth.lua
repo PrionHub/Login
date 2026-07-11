@@ -22,6 +22,9 @@ local function Init()
 
     )
 
+    print("RESPUESTA:")
+    print(response)
+
     local data = HttpService:JSONDecode(response)
 
     if data.success then
@@ -39,7 +42,6 @@ local function Init()
     return false
 
 end
-
 function Auth.Init(Application)
 
     App = Application
