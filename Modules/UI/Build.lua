@@ -170,7 +170,7 @@ local function CreateBody(UI)
 
         Parent = UI.MainFrame,
     
-        Position = UDim2.fromOffset(30, 242),
+        Position = UDim2.fromOffset(30, 200),
     
         Text = "Remember Login"
     
@@ -188,7 +188,7 @@ local function CreateFooter(UI)
 
         Size = UDim2.fromOffset(240, 35),
 
-        Position = UDim2.fromOffset(20, 275),
+        Position = UDim2.fromOffset(20, 230),
 
         Text = "Login / Register",
 
@@ -202,7 +202,7 @@ local function CreateFooter(UI)
 
         Size = UDim2.fromOffset(240, 35),
 
-        Position = UDim2.fromOffset(20, 320),
+        Position = UDim2.fromOffset(20, 275),
 
         Text = "Obtener Llave | Get Key",
 
@@ -218,7 +218,7 @@ local function CreateFooter(UI)
     
         Size = UDim2.fromOffset(220, 20),
     
-        Position = UDim2.fromOffset(30, 360),
+        Position = UDim2.fromOffset(30, 315),
     
         Text = "Don't have an account? Register",
     
