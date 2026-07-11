@@ -56,20 +56,80 @@ Animations.Setup(UI)
 --temp
 UI.LoginButton.MouseButton1Click:Connect(function()
 
-    local data = Auth.Login(
+    local Username = UI.UsernameBox.Text
+    local Password = UI.PasswordBox.Text
 
-        UI.UsernameBox.Text,
-        UI.PasswordBox.Text
+    if Username == "" or Password == "" then
 
-    )
+        warn("Faltan datos.")
 
-    print("Success:", data.success)
-    print("Message:", data.message)
-    
-    if data.info then
-    
-        print("Usuario:", data.info.username)
-    
+        return
+
+    end
+
+    UI.LoginButton.Text = "Connecting..."
+
+    local Result
+
+    if UI.KeyBox.Visible then
+
+        local Key = UI.KeyBox.Text
+
+        if Key == "" then
+
+            warn("Falta la key.")
+
+            UI.LoginButton.Text = "Register"
+
+            return
+
+        end
+
+        Result = Auth.Register(
+            Username,
+            Password,
+            Key
+        )
+
+    else
+
+        Result = Auth.Login(
+            Username,
+            Password
+        )
+
+    end
+
+    print(Result)
+
+    if Result.success then
+
+        print("¡Autenticado!")
+
+        if UI.Remember:GetValue() then
+
+            Remember.Save(
+                Username,
+                Password
+            )
+
+        else
+
+            Remember.Clear()
+
+        end
+
+        UI.LoginButton.Text = "Success!"
+
+        -- Aquí luego llamaremos a:
+        -- loadstring(game:HttpGet(...))()
+
+    else
+
+        warn(Result.message)
+
+        UI.LoginButton.Text = "Login"
+
     end
 
 end)
