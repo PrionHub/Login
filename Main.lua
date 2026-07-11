@@ -91,7 +91,7 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     if Username == "" or Password == "" then
 
-        warn("Faltan datos.")
+        UI.StatusLabel.Text = "STATUS: Missing username or password."
 
         UI.LoginButton.Active = true
 
@@ -99,7 +99,7 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     end
 
-    UI.LoginButton.Text = "Connecting..."
+    UI.StatusLabel.Text = "STATUS: Connecting..."
 
     local Result
 
@@ -109,7 +109,7 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
         if Key == "" then
 
-            warn("Falta la key.")
+            UI.StatusLabel.Text = "STATUS: Missing key."
 
             UI.LoginButton.Text = "Register"
 
@@ -153,7 +153,7 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
         end
 
-        UI.LoginButton.Text = "Success!"
+        UI.StatusLabel.Text = "STATUS: Successfully authenticated."
 
         task.wait(0.8)
 
@@ -164,7 +164,8 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     else
 
-        warn(Result.message)
+        UI.StatusLabel.Text =
+            "STATUS: " .. tostring(Result.message)
 
         UI.LoginButton.Text = UI.Mode
 
