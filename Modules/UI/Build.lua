@@ -147,20 +147,20 @@ local function CreateBody(UI)
     UI.KeyBox = Components.CreateTextBox({
 
         Parent = UI.MainFrame,
-
+    
         Size = UDim2.fromOffset(240, 32),
-
+    
         Position = UDim2.fromOffset(20, 195),
-
-        PlaceholderText = "  Key / Llave (Only for Register)...",
-
+    
+        PlaceholderText = "  Key / Llave...",
+    
         TextXAlignment = Enum.TextXAlignment.Left,
-
-        TextSize = 14
-
+    
+        TextSize = 14,
+    
+        Visible = false
+    
     })
-
-    UI.KeyBox.Visible = false
 
     UI.Remember = Components.CreateCheckBox({
 
@@ -215,16 +215,16 @@ local function CreateFooter(UI)
     
         Parent = UI.MainFrame,
     
-        Size = UDim2.fromOffset(240, 25),
+        Size = UDim2.fromOffset(220, 20),
     
-        Position = UDim2.fromOffset(20, 355),
+        Position = UDim2.fromOffset(30, 355),
     
         Text = "Don't have an account? Register",
     
         TextSize = 12,
     
         BackgroundTransparency = 1
-    
+
     })
 
 end
@@ -236,6 +236,8 @@ end
 function Build.Build()
 
     local UI = {}
+
+    UI.IsRegister = false
 
     UI.Mode = "Login"
 
