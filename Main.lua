@@ -45,6 +45,16 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
 
     RegisterMode = not RegisterMode
 
+    local TweenInfo = TweenInfo.new(
+
+        0.35,
+
+        Enum.EasingStyle.Quint,
+
+        Enum.EasingDirection.Out
+
+    )
+
     local NewSize
     local RememberPos
     local LoginPos
@@ -98,16 +108,6 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
         SwitchPos = UDim2.fromOffset(30, 310)
 
     end
-
-    local TweenInfo = TweenInfo.new(
-
-        0.35,
-
-        Enum.EasingStyle.Quint,
-
-        Enum.EasingDirection.Out
-
-    )
 
     TweenService:Create(
         UI.MainFrame,
