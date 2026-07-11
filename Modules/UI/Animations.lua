@@ -59,7 +59,7 @@ function Animations.Setup(UI)
         
             GetKeyPos = UDim2.fromOffset(20, 320)
         
-            SwitchPos = UDim2.fromOffset(30, 380)
+            SwitchPos = UDim2.fromOffset(30, 360)
 
             StatusPos = UDim2.fromOffset(20, 385)
         
@@ -82,9 +82,9 @@ function Animations.Setup(UI)
         
             GetKeyPos = UDim2.fromOffset(20, 275)
         
-            SwitchPos = UDim2.fromOffset(30, 335)
+            SwitchPos = UDim2.fromOffset(30, 315)
 
-            StatusPos = UDim2.fromOffset(20, 340)
+            StatusPos = UDim2.fromOffset(20, 335)
         
         end
     
