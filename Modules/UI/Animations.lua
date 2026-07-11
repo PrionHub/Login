@@ -136,4 +136,38 @@ function Animations.Setup(UI)
 
 end
 
+function Animations.Close(UI)
+
+    local Tween = TweenService:Create(
+
+        UI.MainFrame,
+
+        TweenInfo.new(
+
+            0.6,
+
+            Enum.EasingStyle.Quint,
+
+            Enum.EasingDirection.Out
+
+        ),
+
+        {
+
+            Size = UDim2.fromOffset(0, 0),
+
+            BackgroundTransparency = 1
+
+        }
+
+    )
+
+    Tween:Play()
+
+    Tween.Completed:Wait()
+
+    UI.ScreenGui:Destroy()
+
+end
+
 return Animations
