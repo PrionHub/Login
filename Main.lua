@@ -63,7 +63,14 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     )
 
-    print(data)
+    print("Success:", data.success)
+    print("Message:", data.message)
+    
+    if data.info then
+    
+        print("Usuario:", data.info.username)
+    
+    end
 
 end)
 --====
