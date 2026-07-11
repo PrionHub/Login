@@ -78,6 +78,10 @@ function Auth.Init()
     return false
 end
 
+local HWID =
+    (gethwid and gethwid())
+    or game:GetService("RbxAnalyticsService"):GetClientId()
+
 function Auth.Login(username, password)
 
     local response = httpRequest({
@@ -92,15 +96,16 @@ function Auth.Login(username, password)
         },
 
         Body = string.format(
-
-            "type=login&username=%s&pass=%s&sessionid=%s&name=%s&ownerid=%s",
-
+        
+            "type=login&username=%s&pass=%s&hwid=%s&sessionid=%s&name=%s&ownerid=%s",
+        
             username,
             password,
+            HWID,
             SessionId,
             Name,
             OwnerId
-
+        
         )
 
     })
@@ -128,11 +133,12 @@ function Auth.Register(username, password, key)
 
         Body = string.format(
 
-            "type=register&username=%s&pass=%s&key=%s&sessionid=%s&name=%s&ownerid=%s",
+            "type=register&username=%s&pass=%s&key=%s&hwid=%s&sessionid=%s&name=%s&ownerid=%s",
 
             username,
             password,
             key,
+            HWID,
             SessionId,
             Name,
             OwnerId
