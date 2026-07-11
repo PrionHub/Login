@@ -27,6 +27,7 @@ function Animations.Setup(UI)
         local LoginPos
         local GetKeyPos
         local SwitchPos
+        local StatusPos
     
         if RegisterMode then
 
@@ -59,6 +60,8 @@ function Animations.Setup(UI)
             GetKeyPos = UDim2.fromOffset(20, 320)
         
             SwitchPos = UDim2.fromOffset(30, 380)
+
+            StatusPos = UDim2.fromOffset(20, 385)
         
         else
         
@@ -80,6 +83,8 @@ function Animations.Setup(UI)
             GetKeyPos = UDim2.fromOffset(20, 275)
         
             SwitchPos = UDim2.fromOffset(30, 335)
+
+            StatusPos = UDim2.fromOffset(20, 340)
         
         end
     
@@ -111,6 +116,12 @@ function Animations.Setup(UI)
             UI.SwitchMode,
             AnimationInfo,
             {Position = SwitchPos}
+        ):Play()
+
+        TweenService:Create(
+            UI.StatusLabel,
+            AnimationInfo,
+            {Position = StatusPos}
         ):Play()
     
         if not RegisterMode then
