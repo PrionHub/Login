@@ -162,7 +162,7 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
         warn(Result.message)
 
-        UI.LoginButton.Text = "Login"
+        UI.LoginButton.Text = UI.Mode
 
     end
 
