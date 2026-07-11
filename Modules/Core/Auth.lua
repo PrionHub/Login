@@ -2,13 +2,49 @@ local Auth = {}
 
 local HttpService = game:GetService("HttpService")
 
-local URL_API = "https://keyauth.win/api/1.3/"
+local App
 
-local KeyAuth_Name = "PrionHub"
-local KeyAuth_Owner = "kYbqiy1KMp"
-local KeyAuth_Version = "1.0"
+local Name = "PrionHub"
+local OwnerId = "TU_OWNER_ID"
+local Version = "1.0"
 
-function Auth.Init()
+local SessionId = nil
+
+local function Init()
+
+    local response = game:HttpGet(
+
+        "https://keyauth.win/api/1.1/"
+        .. "?name=" .. Name
+        .. "&ownerid=" .. OwnerId
+        .. "&type=init"
+        .. "&ver=" .. Version
+
+    )
+
+    local data = HttpService:JSONDecode(response)
+
+    if data.success then
+
+        SessionId = data.sessionid
+
+        print("Sesion iniciada:", SessionId)
+
+        return true
+
+    end
+
+    warn("KeyAuth error:", data.message)
+
+    return false
+
+end
+
+function Auth.Init(Application)
+
+    App = Application
+
+    Init()
 
 end
 
