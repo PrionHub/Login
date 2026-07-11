@@ -50,7 +50,7 @@ function Animations.Setup(UI)
             UI.SwitchMode.Text =
                 "Already have an account? Login"
         
-            NewSize = UDim2.fromOffset(280, 390)
+            NewSize = UDim2.fromOffset(280, 410)
         
             RememberPos = UDim2.fromOffset(30, 242)
         
@@ -58,7 +58,7 @@ function Animations.Setup(UI)
         
             GetKeyPos = UDim2.fromOffset(20, 320)
         
-            SwitchPos = UDim2.fromOffset(30, 360)
+            SwitchPos = UDim2.fromOffset(30, 380)
         
         else
         
@@ -71,7 +71,7 @@ function Animations.Setup(UI)
         
             UI.KeyBox.PlaceholderText = ""
         
-            NewSize = UDim2.fromOffset(280, 340)
+            NewSize = UDim2.fromOffset(280, 360)
         
             RememberPos = UDim2.fromOffset(30, 200)
         
@@ -79,7 +79,7 @@ function Animations.Setup(UI)
         
             GetKeyPos = UDim2.fromOffset(20, 275)
         
-            SwitchPos = UDim2.fromOffset(30, 315)
+            SwitchPos = UDim2.fromOffset(30, 335)
         
         end
     
