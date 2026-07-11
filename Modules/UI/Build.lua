@@ -162,6 +162,11 @@ local function CreateBody(UI)
     
     })
 
+    UI.KeyBox.BackgroundTransparency = 1
+    UI.KeyBox.TextTransparency = 1
+    UI.KeyBox.PlaceholderColor3 = Theme.Colors.TextDark
+    UI.KeyBox.PlaceholderTransparency = 1
+
     UI.Remember = Components.CreateCheckBox({
 
         Parent = UI.MainFrame,
