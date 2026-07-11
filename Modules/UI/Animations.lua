@@ -16,7 +16,7 @@ local AnimationInfo = TweenInfo.new(
 
 function Animations.Setup(UI)
 
-    local RegisterMode = false
+    local RegisterMode = true
 
     UI.SwitchMode.MouseButton1Click:Connect(function()
     
