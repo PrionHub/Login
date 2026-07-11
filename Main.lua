@@ -1,4 +1,4 @@
-local TweenService = game:GetService("TweenService")
+
 local Base =
     "https://raw.githubusercontent.com/PrionHub/Login/main/"
 
