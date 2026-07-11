@@ -5,7 +5,7 @@ local HttpService = game:GetService("HttpService")
 local App
 
 local Name = "PrionHub"
-local OwnerId = "TU_OWNER_ID"
+local OwnerId = "kYbqiy1KMp"
 local Version = "1.0"
 
 local SessionId = nil
