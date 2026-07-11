@@ -53,6 +53,21 @@ Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
 Animations.Setup(UI)
 
+--temp
+UI.LoginButton.MouseButton1Click:Connect(function()
+
+    local data = Auth.Login(
+
+        UI.UsernameBox.Text,
+        UI.PasswordBox.Text
+
+    )
+
+    print(data)
+
+end)
+--====
+
 local Data = Remember.Load()
 
 if Data then
