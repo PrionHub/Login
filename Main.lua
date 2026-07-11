@@ -71,7 +71,7 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     local Result
 
-    if UI.KeyBox.Visible then
+    if UI.Mode == "Register" then
 
         local Key = UI.KeyBox.Text
 
