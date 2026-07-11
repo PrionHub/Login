@@ -228,6 +228,24 @@ local function CreateFooter(UI)
 
     })
 
+    UI.StatusLabel = Components.CreateLabel({
+
+        Parent = UI.MainFrame,
+    
+        Size = UDim2.fromOffset(240, 18),
+    
+        Position = UDim2.fromOffset(20, 335),
+    
+        Text = "STATUS: Ready.",
+    
+        TextSize = 12,
+    
+        TextXAlignment = Enum.TextXAlignment.Left,
+    
+        TextColor3 = Theme.Colors.TextDark
+    
+    })
+
 end
 
 --==========================
