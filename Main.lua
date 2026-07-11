@@ -71,7 +71,6 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
             {
                 BackgroundTransparency = 0,
                 TextTransparency = 0,
-                PlaceholderTransparency = 0
             }
         ):Play()
 
@@ -147,7 +146,6 @@ UI.SwitchMode.MouseButton1Click:Connect(function()
             {
                 BackgroundTransparency = 1,
                 TextTransparency = 1,
-                PlaceholderTransparency = 1
             }
         ):Play()
 
