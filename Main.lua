@@ -166,6 +166,8 @@ UI.LoginButton.MouseButton1Click:Connect(function()
 
     end
 
+    UI.LoginButton.Active = true
+
 end)
 --====
 
