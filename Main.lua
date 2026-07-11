@@ -41,10 +41,13 @@ App.Animations = Animations
 -- Inicializar módulos
 Components.Init(App)
 Build.Init(App)
-Auth.Init(App)
 
 -- Construir la interfaz
 local UI = Build.Build()
+
+App.UI = UI
+
+Auth.Init(App)
 
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
