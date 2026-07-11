@@ -44,7 +44,7 @@ local function CreateMainFrame(ScreenGui)
 
         Parent = ScreenGui,
 
-        Size = UDim2.fromOffset(280, 390),
+        Size = UDim2.fromOffset(280, 340),
 
         Position = UDim2.fromScale(0.5, 0.5),
 
