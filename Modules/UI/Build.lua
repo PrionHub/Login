@@ -160,6 +160,8 @@ local function CreateBody(UI)
 
     })
 
+    UI.KeyBox.Visible = false
+
     UI.Remember = Components.CreateCheckBox({
 
         Parent = UI.MainFrame,
@@ -207,6 +209,22 @@ local function CreateFooter(UI)
 
         BackgroundColor3 = Color3.fromRGB(50, 50, 50)
 
+    })
+
+    UI.SwitchMode = Components.CreateButton({
+    
+        Parent = UI.MainFrame,
+    
+        Size = UDim2.fromOffset(240, 25),
+    
+        Position = UDim2.fromOffset(20, 355),
+    
+        Text = "Don't have an account? Register",
+    
+        TextSize = 12,
+    
+        BackgroundTransparency = 1
+    
     })
 
 end
