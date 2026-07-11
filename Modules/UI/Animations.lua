@@ -51,7 +51,7 @@ function Animations.Setup(UI)
             UI.SwitchMode.Text =
                 "Already have an account? Login"
         
-            NewSize = UDim2.fromOffset(280, 410)
+            NewSize = UDim2.fromOffset(280, 405)
         
             RememberPos = UDim2.fromOffset(30, 242)
         
