@@ -2,6 +2,18 @@ local Animations = {}
 
 local TweenService = game:GetService("TweenService")
 
+local AnimationTime = 0.35
+
+local AnimationInfo = TweenInfo.new(
+
+    0.35,
+
+    Enum.EasingStyle.Quint,
+
+    Enum.EasingDirection.Out
+
+)
+
 function Animations.Setup(UI)
 
     local RegisterMode = false
@@ -9,16 +21,6 @@ function Animations.Setup(UI)
     UI.SwitchMode.MouseButton1Click:Connect(function()
     
         RegisterMode = not RegisterMode
-    
-        local TweenInfo = TweenInfo.new(
-    
-            0.35,
-    
-            Enum.EasingStyle.Quint,
-    
-            Enum.EasingDirection.Out
-    
-        )
     
         local NewSize
         local RememberPos
@@ -34,7 +36,7 @@ function Animations.Setup(UI)
         
             TweenService:Create(
                 UI.KeyBox,
-                TweenInfo,
+                AnimationInfo,
                 {
                     BackgroundTransparency = 0,
                     TextTransparency = 0,
@@ -79,31 +81,31 @@ function Animations.Setup(UI)
     
         TweenService:Create(
             UI.MainFrame,
-            TweenInfo,
+            AnimationInfo,
             {Size = NewSize}
         ):Play()
     
         TweenService:Create(
             UI.Remember.Instance,
-            TweenInfo,
+            AnimationInfo,
             {Position = RememberPos}
         ):Play()
     
         TweenService:Create(
             UI.LoginButton,
-            TweenInfo,
+            AnimationInfo,
             {Position = LoginPos}
         ):Play()
     
         TweenService:Create(
             UI.GetKeyButton,
-            TweenInfo,
+            AnimationInfo,
             {Position = GetKeyPos}
         ):Play()
     
         TweenService:Create(
             UI.SwitchMode,
-            TweenInfo,
+            AnimationInfo,
             {Position = SwitchPos}
         ):Play()
     
@@ -111,17 +113,17 @@ function Animations.Setup(UI)
     
             TweenService:Create(
                 UI.KeyBox,
-                TweenInfo,
+                AnimationInfo,
                 {
                     BackgroundTransparency = 1,
                     TextTransparency = 1,
                 }
             ):Play()
     
-            task.delay(0.35, function()
-    
+            task.delay(AnimationTime, function()
+
                 UI.KeyBox.Visible = false
-    
+            
             end)
     
         end
