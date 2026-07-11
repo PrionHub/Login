@@ -53,6 +53,30 @@ Particles.Create(UI.MainFrame, UI.ParticleContainer)
 
 Animations.Setup(UI)
 
+local GET_KEY_URL = "TU_LINK_AQUI"
+
+UI.GetKeyButton.MouseButton1Click:Connect(function()
+
+    if setclipboard then
+
+        setclipboard(GET_KEY_URL)
+
+        UI.GetKeyButton.Text = "Copied!"
+
+        task.wait(2)
+
+        UI.GetKeyButton.Text =
+            "Obtener Llave | Get Key"
+
+    else
+
+        UI.GetKeyButton.Text =
+            "Clipboard not supported"
+
+    end
+
+end)
+
 --temp
 UI.LoginButton.MouseButton1Click:Connect(function()
 
