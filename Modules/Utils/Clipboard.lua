@@ -1,6 +1,6 @@
 local Clipboard = {}
 local Animations
-local GET_KEY_URL = "TU_LINK_AQUI"
+local GET_KEY_URL = "discord.gg/uVwnP9WWbx"
 
 function Clipboard.Setup(App)
 
