@@ -65,15 +65,4 @@ Particles.Create(UI.MainFrame, UI.ParticleContainer)
 Animations.Setup(UI)
 Controller.Setup()
 Clipboard.Setup(UI)
-
-local Data = Remember.Load()
-
-if Data then
-
-    UI.UsernameBox.Text = Data.Username
-
-    UI.PasswordBox.Text = Data.Password
-
-    UI.Remember:SetValue(true)
-
-end
+Remember.LoadToUI(UI)
