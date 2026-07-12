@@ -1,10 +1,16 @@
 local Clipboard = {}
-
+local Animations
 local GET_KEY_URL = "TU_LINK_AQUI"
 
-function Clipboard.Setup(UI)
+function Clipboard.Setup(App)
+
+    local UI = App.UI
+
+    Animations = App.Animations
 
     UI.GetKeyButton.MouseButton1Click:Connect(function()
+
+        Animations.ButtonClick(UI.GetKeyButton)
 
         if setclipboard then
 
