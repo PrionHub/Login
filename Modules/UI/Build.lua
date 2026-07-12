@@ -200,17 +200,19 @@ local function CreateFooter(UI)
     UI.GetKeyButton = Components.CreateButton({
 
         Parent = UI.MainFrame,
-
+    
         Size = UDim2.fromOffset(240, 35),
-
-        Position = UDim2.fromOffset(20, 275),
-
+    
+        Position = UDim2.fromOffset(140, 292),
+    
+        AnchorPoint = Vector2.new(0.5, 0.5),
+    
         Text = "Obtener Llave | Get Key",
-
+    
         TextSize = 14,
-
+    
         BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-
+    
     })
 
     UI.SwitchMode = Components.CreateButton({
