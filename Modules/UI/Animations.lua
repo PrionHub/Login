@@ -14,6 +14,66 @@ local AnimationInfo = TweenInfo.new(
 
 )
 
+local ClickInfo = TweenInfo.new(
+
+    0.08,
+
+    Enum.EasingStyle.Quad,
+
+    Enum.EasingDirection.Out
+
+)
+
+function Animations.ButtonClick(Button)
+
+    local OriginalSize = Button.Size
+
+    local SmallerSize = UDim2.new(
+
+        OriginalSize.X.Scale,
+        OriginalSize.X.Offset - 8,
+
+        OriginalSize.Y.Scale,
+        OriginalSize.Y.Offset - 4
+
+    )
+
+    local Shrink = TweenService:Create(
+
+        Button,
+
+        ClickInfo,
+
+        {
+
+            Size = SmallerSize
+
+        }
+
+    )
+
+    local Expand = TweenService:Create(
+
+        Button,
+
+        ClickInfo,
+
+        {
+
+            Size = OriginalSize
+
+        }
+
+    )
+
+    Shrink:Play()
+
+    Shrink.Completed:Wait()
+
+    Expand:Play()
+
+end
+
 function Animations.Setup(UI)
 
     local RegisterMode = false
