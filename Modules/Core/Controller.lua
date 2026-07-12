@@ -21,6 +21,8 @@ function Controller.Setup()
 
     UI.LoginButton.MouseButton1Click:Connect(function()
 
+        Animations.ButtonClick(UI.LoginButton)
+
         if not UI.LoginButton.Active then
             return
         end
