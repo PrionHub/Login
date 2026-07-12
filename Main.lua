@@ -29,6 +29,9 @@ local Animations =
 local Drag =
     loadstring(game:HttpGet(Base.."Modules/UI/Drag.lua"))()
 
+local Clipboard =
+    loadstring(game:HttpGet(Base.."Modules/Utils/Clipboard.lua"))()
+
 local Controller =
     loadstring(game:HttpGet(Base.."Modules/Core/Controller.lua"))()
 
@@ -44,6 +47,7 @@ App.Remember = Remember
 App.Auth = Auth
 App.Animations = Animations
 App.Drag = Drag
+App.Clipboard = Clipboard
 App.Controller = Controller
 
 -- Inicializar módulos
@@ -54,42 +58,13 @@ Build.Init(App)
 local UI = Build.Build()
 
 Drag.Enable(UI.MainFrame)
-
 App.UI = UI
-
 Controller.Init(App)
-
 Auth.Init()
-
 Particles.Create(UI.MainFrame, UI.ParticleContainer)
-
 Animations.Setup(UI)
-
 Controller.Setup()
-
-local GET_KEY_URL = "TU_LINK_AQUI"
-
-UI.GetKeyButton.MouseButton1Click:Connect(function()
-
-    if setclipboard then
-
-        setclipboard(GET_KEY_URL)
-
-        UI.GetKeyButton.Text = "Copied!"
-
-        task.wait(2)
-
-        UI.GetKeyButton.Text =
-            "Obtener Llave | Get Key"
-
-    else
-
-        UI.GetKeyButton.Text =
-            "Clipboard not supported"
-
-    end
-
-end)
+Clipboard.Setup(UI)
 
 local Data = Remember.Load()
 
