@@ -57,8 +57,6 @@ function Auth.Init()
         return false
 
     end
-
-    print(response.Body)
     
     local data = HttpService:JSONDecode(
         response.Body
@@ -67,8 +65,6 @@ function Auth.Init()
     if data.success then
 
         SessionId = data.sessionid
-
-        print("Sesión iniciada:", SessionId)
 
         return true
     end
