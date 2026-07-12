@@ -26,37 +26,48 @@ function Drag.Enable(Frame)
     end
 
     Frame.InputBegan:Connect(function(Input)
-
-        if Input.UserInputType == Enum.UserInputType.MouseButton1 then
-
+    
+        if
+    
+            Input.UserInputType == Enum.UserInputType.MouseButton1
+            or Input.UserInputType == Enum.UserInputType.Touch
+    
+        then
+    
             Dragging = true
             DragStart = Input.Position
             StartPosition = Frame.Position
-
+    
             Input.Changed:Connect(function()
 
-                if Input.UserInputState == Enum.UserInputState.End then
-
+                if Input.UserInputState == Enum.UserInputState.End
+                    or Input.UserInputState == Enum.UserInputState.Cancel
+                then
+            
                     Dragging = false
-
+            
                 end
-
+            
             end)
-
+    
         end
-
+    
     end)
 
     UserInputService.InputChanged:Connect(function(Input)
-
-        if Dragging and Input.UserInputType == Enum.UserInputType.MouseMovement then
-
+    
+        if Dragging and (
+    
+            Input.UserInputType == Enum.UserInputType.MouseMovement
+            or Input.UserInputType == Enum.UserInputType.Touch
+    
+        ) then
+    
             Update(Input)
-
+    
         end
-
+    
     end)
-
 end
 
 return Drag
