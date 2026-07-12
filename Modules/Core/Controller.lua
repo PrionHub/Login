@@ -83,8 +83,6 @@ function Controller.Setup()
 
         end
 
-        print(Result)
-
         if Result.success then
 
             if UI.Remember:GetValue() then
