@@ -115,9 +115,9 @@ function Animations.Setup(UI)
         
             RememberPos = UDim2.fromOffset(30, 242)
         
-            LoginPos = UDim2.fromOffset(20, 275)
+            LoginPos = UDim2.fromOffset(140, 292)
         
-            GetKeyPos = UDim2.fromOffset(20, 320)
+            GetKeyPos = UDim2.fromOffset(140, 337)
         
             SwitchPos = UDim2.fromOffset(30, 360)
 
@@ -138,9 +138,9 @@ function Animations.Setup(UI)
         
             RememberPos = UDim2.fromOffset(30, 200)
         
-            LoginPos = UDim2.fromOffset(20, 230)
+            LoginPos = UDim2.fromOffset(140, 247)
         
-            GetKeyPos = UDim2.fromOffset(20, 275)
+            GetKeyPos = UDim2.fromOffset(140, 292)
         
             SwitchPos = UDim2.fromOffset(30, 315)
 
