@@ -109,7 +109,7 @@ function Controller.Setup()
 
             Animations.Close(UI)
 
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/TheSilentOneArrived/PH/refs/heads/main/PH", true))()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/PrionHub/PH/main/source.lua", true))()
 
         else
 
