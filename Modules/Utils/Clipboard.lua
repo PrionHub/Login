@@ -21,7 +21,7 @@ function Clipboard.Setup(App)
             task.wait(2)
 
             UI.GetKeyButton.Text =
-                "Obtener Llave | Get Key"
+                "Get Key"
 
         else
 
