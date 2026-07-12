@@ -185,17 +185,18 @@ local function CreateFooter(UI)
     UI.LoginButton = Components.CreateButton({
 
         Parent = UI.MainFrame,
-
+    
         Size = UDim2.fromOffset(240, 35),
-
-        Position = UDim2.fromOffset(20, 230),
-
+    
+        Position = UDim2.fromOffset(140, 247),
+    
+        AnchorPoint = Vector2.new(0.5, 0.5),
+    
         Text = "Login",
-
+    
         TextSize = 14
 
     })
-
     UI.GetKeyButton = Components.CreateButton({
 
         Parent = UI.MainFrame,
