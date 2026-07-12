@@ -26,6 +26,9 @@ local Auth =
 local Animations =
     loadstring(game:HttpGet(Base.."Modules/UI/Animations.lua"))()
 
+local Drag =
+    loadstring(game:HttpGet(Base.."Modules/UI/Drag.lua"))()
+
 -- Crear App primero
 local App = {}
 
@@ -37,6 +40,7 @@ App.Particles = Particles
 App.Remember = Remember
 App.Auth = Auth
 App.Animations = Animations
+App.Drag = Drag
 
 -- Inicializar módulos
 Components.Init(App)
@@ -44,6 +48,8 @@ Build.Init(App)
 
 -- Construir la interfaz
 local UI = Build.Build()
+
+Drag.Enable(UI.MainFrame)
 
 App.UI = UI
 
