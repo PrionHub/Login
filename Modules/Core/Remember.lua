@@ -37,6 +37,22 @@ function Remember.Load()
 
 end
 
+function Remember.LoadToUI(UI)
+
+    local Data = Remember.Load()
+
+    if not Data then
+        return
+    end
+
+    UI.UsernameBox.Text = Data.Username
+
+    UI.PasswordBox.Text = Data.Password
+
+    UI.Remember:SetValue(true)
+
+end
+
 function Remember.Clear()
 
     if delfile and isfile(FILE_NAME) then
