@@ -207,7 +207,7 @@ local function CreateFooter(UI)
     
         AnchorPoint = Vector2.new(0.5, 0.5),
     
-        Text = "Obtener Llave | Get Key",
+        Text = "Get Key",
     
         TextSize = 14,
     
